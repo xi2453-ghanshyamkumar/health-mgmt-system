@@ -1,6 +1,22 @@
 # health-mgmt-system
 Health Management System
+Approach 1 using docker compose file:
+-----------------------------------------
+step 1: clone the project 
+step 2: got proejct directory -> open terminal run  mvn clean install
+step 3: after successful build project(make sure you have docker installed on your system)
+step 4: systemctl start docker
+step 5: docker network create hms-mysql
+step 6: docker container run --name hms --network hms-mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=root -d mysql:8
+step 7: docker container logs -f hms
+step 8: docker container exec -it hms bash
+step 9: docker container logs -f hms
+step 10: docker image build -t health-mgmt-system .
+step 11: docker container run --network hms-mysql --name health-mgmt-system-container -p 8080:8080 -d health-mgmt-system
+step 12: after succesful running use below given postman collection in order to perforom CURD API for Doctors and Patients
 
+Approach 2 using docker compose file:
+-----------------------------------------
 step 1: please create database name as hms mysql.
 step 2: clone the project 
 step 3: import the project in your favourite IDE(STS)
