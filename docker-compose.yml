@@ -1,0 +1,21 @@
+version: "3"
+services:
+  health-mgmt-system:
+    image: health-mgmt-system
+    ports:
+      - "8080:8080"
+    networks:
+      - hms-mysql
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    networks:
+      - hms-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=root  
+
+networks:
+  hms-mysql: 
