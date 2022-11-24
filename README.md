@@ -15,13 +15,16 @@ step 10: docker image build -t health-mgmt-system .
 step 11: docker container run --network hms-mysql --name health-mgmt-system-container -p 8080:8080 -d health-mgmt-system
 step 12: after succesful running use below given postman collection in order to perforom CURD API for Doctors and Patients
 
-Approach 2 using docker compose file:
+Approach 2 using STS and Local mysql DB:
 -----------------------------------------
 step 1: please create database name as hms mysql.
 step 2: clone the project 
 step 3: import the project in your favourite IDE(STS)
 step 4: right click on project ruan as spring boot application
 Step 5: below are API collection for the same:
+
+Postman Collection of HMS:
+-----------------------------
 {
 	"info": {
 		"_postman_id": "80e9497d-cf0c-4c2b-b42c-654b279c07bb",
