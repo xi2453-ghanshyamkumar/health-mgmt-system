@@ -1,5 +1,12 @@
 # health-mgmt-system
 Health Management System
+Approach using docker compose:
+-------------------------------------
+step 1: install docker and other software as(jdk8, maven and ide)
+step 2: clone the project using git
+step 3: got to project directory ipoen terminal and run command docker-compose up
+step 4: after suceesfull run of above command using given postman coleection in order to perform CURD oeration
+
 Approach 1 using docker compose file:
 -----------------------------------------
 step 1: clone the project 
